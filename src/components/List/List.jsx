@@ -1,7 +1,7 @@
 import React from 'react';
 import './List.scss';
 import Badge from '../Badge/Badge';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const List = ({ items, onDeleteList, onClick, routeObj }) => {
 
@@ -15,8 +15,11 @@ const List = ({ items, onDeleteList, onClick, routeObj }) => {
         <ul className='list' onClick={onClick}>
             {items.map((item, index) => (
                 <li key={index} >
-                    <Link to={item.id ? `/list/${item.id}` : '/'}
-                        className={`${item.className ? item.className : ''}`}>
+                    <NavLink exact
+                        to={item.id ? `/list/${item.id}` : '/'}
+                        className={`${item.className ? item.className : ''}`}
+                        activeClassName={!item.addButton ? 'active' : ''}
+                    >
                         <span>
                             {item.icon ? item.icon : <Badge color={item.color.name} />}
                         </span>
@@ -31,7 +34,7 @@ const List = ({ items, onDeleteList, onClick, routeObj }) => {
                                 </svg>
                             </div>
                         }
-                    </Link>
+                    </NavLink>
                 </li>
             ))}
         </ul >

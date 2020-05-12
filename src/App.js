@@ -14,7 +14,7 @@ function App({ initializeApp, initialized }) {
   if (!initialized) return <Preloader />
 
   return (
-    <Route path='/:list/:listId' children={(routeObj) => (
+    <Route path='/list/:listId' children={(routeObj) => (
       <div className='todo'>
         <Sidebar routeObj={routeObj} />
         <Main />
