@@ -8,11 +8,6 @@ const Tasks = ({ list, lists, listId, onEditList, onAddTask, onToggleTask, onEdi
 
     const currentList = list || lists.find(list => list.id == listId)
 
-    const editList = () => {
-        let newName = window.prompt('123', currentList.name)
-        if (newName) onEditList(currentList.id, newName)
-    }
-
     const editTask = (listId, id, text) => {
         let newText = window.prompt('123', text)
         if (newText) onEditTask(listId, id, newText)
@@ -20,7 +15,7 @@ const Tasks = ({ list, lists, listId, onEditList, onAddTask, onToggleTask, onEdi
 
     return (
         <div className='tasks'>
-            <TaskTitle currentList={currentList} onEditList={editList} />
+            <TaskTitle currentList={currentList} onEditList={onEditList} />
             {!currentList.tasks.length && !list && <h2>Задачи отсутствуют</h2>}
             <Task
                 currentList={currentList}
