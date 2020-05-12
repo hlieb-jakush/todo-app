@@ -1,0 +1,44 @@
+.tasks__form {
+    .form__button {
+        display: flex;
+        align-items: center;
+        opacity: 0.3;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+
+        span:first-of-type {
+            position: relative;
+            top: 2px;
+            left: 2px;
+            margin-right: 18px;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .form__field {
+        input {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        button:first-of-type {
+            margin-right: 10px;
+        }
+
+        button:last-of-type {
+            color: #9C9C9C;
+            background-color: #F4F6F8;;
+        }
+
+        button:last-of-type:hover {
+            background-color: darken(#F4F6F8, 5%);
+        }
+
+        button:last-of-type:active {
+            background-color: darken(#F4F6F8, 10%);
+        }
+    }
+}

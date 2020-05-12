@@ -1,0 +1,32 @@
+.tasks__title {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #F2F2F2;
+     
+    h1 {
+        margin-right: 15px;
+        font-family: Montserrat;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 39px;
+        color: #64C4ED;
+    }
+
+    svg {
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+    }
+
+    &:hover {
+        svg {
+            opacity: 0.2;           
+        }
+    }
+
+    svg:hover {
+        opacity: 0.4;
+    }
+}
