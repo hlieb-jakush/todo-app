@@ -6,7 +6,7 @@ import './Tasks.scss'
 
 const Tasks = ({ list, lists, listId, onEditList, onAddTask, onToggleTask, onEditTask, onDeleteTask }) => {
 
-    const currentList = list || lists.find(list => list.id == listId)
+    const currentList = list || lists.find(list => list.id === parseInt(listId, 10))
 
     const editTask = (listId, id, text) => {
         let newText = window.prompt('123', text)

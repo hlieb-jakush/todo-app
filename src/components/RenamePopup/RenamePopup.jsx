@@ -42,7 +42,7 @@ const RenamePopup = ({ svg, currentName, onRename }) => {
                             value={inputValue}
                             onChange={(e) => setInputValue(e.target.value)}
                         />
-                        <button onClick={rename}>Добавить</button>
+                        <button onClick={rename}>Переименовать</button>
                         <button onClick={toggle}>Отмена</button>
                     </div>
                 )

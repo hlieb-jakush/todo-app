@@ -1,7 +1,7 @@
-import React from 'react';
-import './List.scss';
-import Badge from '../Badge/Badge';
-import { NavLink } from 'react-router-dom';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import Badge from '../Badge/Badge'
+import './List.scss'
 
 const List = ({ items, onDeleteList, onClick, routeObj }) => {
 
@@ -41,4 +41,4 @@ const List = ({ items, onDeleteList, onClick, routeObj }) => {
     )
 }
 
-export default List;
+export default List
