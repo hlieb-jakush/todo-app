@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
+import AddListPopup from './AddListPopup/AddListPopup'
 import List from '../List/List'
 import './AddList.scss'
-import { useState } from 'react'
-import AddListPopup from './AddListPopup/AddListPopup'
 
 const AddList = ({ colors, onAddList }) => {
     const [visiblePopup, setVisiblePopup] = useState(false)
@@ -30,4 +29,4 @@ const AddList = ({ colors, onAddList }) => {
     )
 }
 
-export default AddList;
+export default AddList

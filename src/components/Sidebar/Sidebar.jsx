@@ -1,10 +1,10 @@
-import React from 'react';
-import './Sidebar.scss';
-import HeadList from '../HeadList/HeadList';
-import List from '../List/List';
-import AddList from '../AddList/AddList';
-import { connect } from 'react-redux';
-import { onAddList, onDeleteList } from '../../state/reducer';
+import React from 'react'
+import { connect } from 'react-redux'
+import HeadList from '../HeadList/HeadList'
+import List from '../List/List'
+import AddList from '../AddList/AddList'
+import { onAddList, onDeleteList } from '../../state/reducer'
+import './Sidebar.scss'
 
 const Sidebar = ({ lists, colors, onAddList, onDeleteList, routeObj }) => {
     return (

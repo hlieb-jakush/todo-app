@@ -1,5 +1,5 @@
-import React from 'react';
-import './Badge.scss';
+import React from 'react'
+import './Badge.scss'
 
 const Badge = ({ color, onClick, className }) => {
     return (
@@ -7,4 +7,4 @@ const Badge = ({ color, onClick, className }) => {
     )
 }
 
-export default Badge;
+export default Badge

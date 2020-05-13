@@ -1,5 +1,5 @@
-import React from "react";
-import List from "../List/List";
+import React from "react"
+import List from "../List/List"
 
 
 const MainList = () => {
@@ -15,4 +15,4 @@ const MainList = () => {
     )
 }
 
-export default MainList;
+export default MainList

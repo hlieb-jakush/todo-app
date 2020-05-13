@@ -1,23 +1,23 @@
-import React from 'react';
-import './TasksForm.scss';
-import { useState } from 'react';
+import React from 'react'
+import { useState } from 'react'
+import './TasksForm.scss'
 
 const TasksForm = ({ list, onAddTask }) => {
-    const [createMode, setCreateMode] = useState(false);
-    const [inputValue, setInputValue] = useState('');
+    const [createMode, setCreateMode] = useState(false)
+    const [inputValue, setInputValue] = useState('')
     const toggleCreateMode = () => {
-        setCreateMode(!createMode);
+        setCreateMode(!createMode)
     }
 
     const reset = () => {
-        setInputValue('');
-        toggleCreateMode();
+        setInputValue('')
+        toggleCreateMode()
     }
 
     const addTask = () => {
         if (inputValue) {
-            onAddTask(list.id, inputValue);
-            reset();
+            onAddTask(list.id, inputValue)
+            reset()
         }
     }
 
@@ -55,4 +55,4 @@ const TasksForm = ({ list, onAddTask }) => {
     )
 }
 
-export default TasksForm;
+export default TasksForm
