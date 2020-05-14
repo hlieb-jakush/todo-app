@@ -6,58 +6,64 @@
       "id": 1
     },
     {
-      "name": "Личное 2",
+      "name": "Покупки",
       "colorId": 3,
       "id": 2
     },
     {
-      "name": "Покупки",
-      "colorId": 8,
+      "name": "Личное",
+      "colorId": 5,
       "id": 3
     }
   ],
   "tasks": [
     {
       "listId": 1,
-      "text": "Освоить HTML и CSS",
+      "text": "Изучить HTML/CSS",
       "completed": true,
       "id": 1
     },
     {
       "listId": 1,
-      "text": "Освоить JavaScript",
+      "text": "Изучить JavaScript",
       "completed": true,
       "id": 2
     },
     {
       "listId": 1,
-      "text": "Основы React",
+      "text": "Освоить базовый React",
       "completed": true,
       "id": 3
     },
     {
       "listId": 1,
-      "text": "Основные библиотеки к React (Redux, Thunk и пр.)",
+      "text": "Освоить основные библиотеки",
       "completed": true,
       "id": 4
     },
     {
-      "listId": 3,
-      "text": "Купить наушники",
-      "completed": true,
+      "listId": 1,
+      "text": "Освоить продвинутый React",
+      "completed": false,
       "id": 5
     },
     {
-      "listId": 3,
-      "text": "Купить телефон",
-      "completed": false,
+      "listId": 2,
+      "text": "Купить наушники",
+      "completed": true,
       "id": 6
     },
     {
-      "listId": 1,
-      "text": "Продвинутый React",
+      "listId": 3,
+      "text": "Устроиться на работу",
       "completed": false,
       "id": 7
+    },
+    {
+      "listId": 2,
+      "text": "Купить телефон",
+      "completed": false,
+      "id": 8
     }
   ],
   "colors": [
