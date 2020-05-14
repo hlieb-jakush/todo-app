@@ -1,15 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-import { initializeApp } from './state/reducer';
-import Preloader from './components/Preloader/Preloader';
-import Sidebar from './components/Sidebar/Sidebar';
-import Main from './components/Main/Main';
-import { Route } from 'react-router-dom';
+import { Route } from 'react-router-dom'
+import { initializeApp } from './state/reducer'
+import Preloader from './components/Preloader/Preloader'
+import Sidebar from './components/Sidebar/Sidebar'
+import Main from './components/Main/Main'
+
 
 function App({ initializeApp, initialized }) {
   useEffect(() => {
-    initializeApp();
-  }, []);
+    initializeApp()
+  }, [])
 
   if (!initialized) return <Preloader />
 
@@ -21,7 +22,7 @@ function App({ initializeApp, initialized }) {
       </div>
     )} />
 
-  );
+  )
 }
 
 const mapStateToProps = (state) => {
@@ -30,4 +31,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, { initializeApp })(App);
+export default connect(mapStateToProps, { initializeApp })(App)
