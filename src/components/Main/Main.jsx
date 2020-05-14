@@ -3,10 +3,12 @@ import { connect } from 'react-redux'
 import { Route } from 'react-router-dom'
 import Tasks from '../Tasks/Tasks'
 import { onEditList, onAddTask, onToggleTask, onEditTask, onDeleteTask } from '../../state/reducer'
+import './Main.scss'
 
 const Main = ({ lists, onEditList, onAddTask, onToggleTask, onEditTask, onDeleteTask }) => {
     return (
         <div className='todo__tasks'>
+            {lists.length === 0 && < h2 > Списки отсутствуют</h2>}
             <Route exact path='/' render={() => lists.map(list =>
                 <Tasks
                     key={list.id}

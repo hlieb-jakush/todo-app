@@ -10,8 +10,8 @@ const Tasks = ({ list, lists, listId, onEditList, onAddTask, onToggleTask, onEdi
 
     return (
         <div className='tasks'>
+            {currentList.tasks.length === 0 && lists && < h2 > Задачи отсутствуют</h2>}
             <TaskTitle currentList={currentList} onEditList={onEditList} />
-            {!currentList.tasks.length && !list && <h2>Задачи отсутствуют</h2>}
             <Task
                 currentList={currentList}
                 onToggleTask={onToggleTask}
