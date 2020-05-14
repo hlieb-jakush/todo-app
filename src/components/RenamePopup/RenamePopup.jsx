@@ -30,9 +30,9 @@ const RenamePopup = ({ svg, currentName, onRename }) => {
         <div className='rename-popup'>
             {!createMode ?
                 (
-                    <div className='rename-popup__button' onClick={toggle}>
+                    <span className='rename-popup__button' onClick={toggle}>
                         {svg}
-                    </div>
+                    </span>
                 ) : (
                     <div className='rename-popup__field'>
                         <input
