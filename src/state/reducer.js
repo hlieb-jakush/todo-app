@@ -63,8 +63,8 @@ export const todosReducer = (state = initialState, action) => {
             return {
                 ...state,
                 lists: [...state.lists.map(list => {
-                    if (list.id === action.listId) {
-                        list.tasks = [...list.tasks, { listId: action.listId, text: action.text, completed: false }]
+                    if (list.id === action.taskObj.listId) {
+                        list.tasks = [...list.tasks, action.taskObj]
                     }
                     return list
                 })]
@@ -124,7 +124,7 @@ const addList = (listObj, colorId) => ({ type: ADD_LIST, listObj, colorId })
 const editList = (id, newName) => ({ type: EDIT_LIST, id, newName })
 const deleteList = (id) => ({ type: DELETE_LIST, id })
 
-const addTask = (listId, text) => ({ type: ADD_TASK, listId, text })
+const addTask = (taskObj) => ({ type: ADD_TASK, taskObj })
 const editTask = (listId, id, text) => ({ type: EDIT_TASK, listId, id, text })
 const toggleTask = (listId, id, value) => ({ type: TOGGLE_TASK, listId, id, value })
 const deleteTask = (listId, id) => ({ type: DELETE_TASK, listId, id })
@@ -153,7 +153,7 @@ export const onDeleteList = (id) => (dispatch) => {
 
 export const onAddTask = (listId, text) => (dispatch) => {
     API.addTask(listId, text)
-        .then(() => dispatch(addTask(listId, text)))
+        .then(data => dispatch(addTask(data)))
 }
 
 export const onEditTask = (listId, id, text) => (dispatch) => {
